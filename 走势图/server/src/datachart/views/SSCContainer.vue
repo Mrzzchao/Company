@@ -55,7 +55,7 @@
                 return `/datachart/${this.$route.params.area}/`;
             },
             page() {
-                if (~this.$route.path.indexOf('/zx')) {
+                if (~this.$route.path.indexOf('/zx')) {    // ~的作用是为了使得-1变为false,非-1变为true
                     return 'zx';
                 } else if (~this.$route.path.indexOf('/hz')) {
                     return 'hz';
@@ -64,6 +64,7 @@
                 }
             },
 
+            // 时时彩标题变化
             title() {
                 return [this.nameMap[this.$route.params.area], this.$route.meta.title].join('-');
             }
