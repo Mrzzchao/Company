@@ -1,0 +1,623 @@
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title>走势图首页</title>
+
+    <link type="text/css" rel="stylesheet" href="http://www.500cache.com/mobile/??widget/head/head.css,widget/reset.css,touch/css/chart/chart.css" />
+    <script src="http://www.500cache.com/mobile/touch/js/flexible.js"></script>
+</head>
+<body>
+<div class="chart-wrap l-full l-flex-column">
+    <!--head begin-->
+    <header id="uiHead" class="ui-head">
+        <div class="ui-head-in">
+            <div class="ui-head-l">
+                <span class="ui-head-btn1" onclick="location.href='/'">返回</span>
+            </div>
+
+            <div class="ui-head-m">
+                <h2 class="ui-head-tit">500.com走势图</h2>
+            </div>
+        </div>
+    </header>
+    <!--head end-->
+    <!--彩种走势图 start-->
+    <div class="chart-box l-flex-1 l-relative">
+        <div class="l-full l-scroll-y" id="list">
+            <!--热门彩种-->
+            <div class="hot-lottery">
+                <div class="chart-tit pl">热门彩种</div>
+                <div class="chart-box-list">
+                    <!--单独的小方格-->
+                    <a href="http://m.500.com/datachart/ssq/" class="chart-box-item">
+                        <div><img alt="双色球" src="http://www.500cache.com/mobile/touch/images/chart/hot-lottery/ssq.jpg"></div>
+                        <div class="caiz-name">双色球</div>
+                    </a>
+                    <a href="http://m.500.com/datachart/sd/" class="chart-box-item">
+                        <div><img alt="福彩3D" src="http://www.500cache.com/mobile/touch/images/chart/hot-lottery/fcsd.jpg"></div>
+                        <div class="caiz-name">福彩3D</div>
+                    </a>
+                    <a href="http://m.500.com/datachart/dlt/" class="chart-box-item">
+                        <div><img alt="超级大乐透" src="http://www.500cache.com/mobile/touch/images/chart/hot-lottery/dlt.jpg"></div>
+                        <div class="caiz-name">超级大乐透</div>
+                    </a>
+                    <a href="http://m.500.com/datachart/pls/" class="chart-box-item">
+                        <div><img alt="排列三" src="http://www.500cache.com/mobile/touch/images/chart/hot-lottery/pls.jpg"></div>
+                        <div class="caiz-name">排列三</div>
+                    </a>
+                    <a href="http://m.500.com/datachart/qxc/" class="chart-box-item">
+                        <div><img alt="七星彩" src="http://www.500cache.com/mobile/touch/images/chart/hot-lottery/qxc.jpg"></div>
+                        <div class="caiz-name">七星彩</div>
+                    </a>
+                    <a href="http://m.500.com/datachart/qlc/" class="chart-box-item">
+                        <div><img alt="七乐彩" src="http://www.500cache.com/mobile/touch/images/chart/hot-lottery/qlc.jpg"></div>
+                        <div class="caiz-name">七乐彩</div>
+                    </a>
+                    <a href="http://m.500.com/datachart/ssc/" class="chart-box-item">
+                        <div><img alt="重庆时时彩" src="http://www.500cache.com/mobile/touch/images/chart/hot-lottery/cqssc.jpg"></div>
+                        <div class="caiz-name">重庆时时彩</div>
+                    </a>
+                    <a href="http://m.500.com/datachart/jssyxw/" class="chart-box-item">
+                        <div><img alt="江苏11选5" src="http://www.500cache.com/mobile/touch/images/chart/hot-lottery/jssy.jpg"></div>
+                        <div class="caiz-name">江苏11选5</div>
+                    </a>
+                    <a href="http://m.500.com/datachart/dlc/" class="chart-box-item">
+                        <div><img alt="江西11选5" src="http://www.500cache.com/mobile/touch/images/chart/hot-lottery/jxsy.jpg"></div>
+                        <div class="caiz-name">江西11选5</div>
+                    </a>
+                    <a href="http://m.500.com/datachart/sfc/" class="chart-box-item">
+                        <div><img alt="足彩" src="http://www.500cache.com/mobile/touch/images/chart/hot-lottery/zc.jpg"></div>
+                        <div class="caiz-name">足彩</div>
+                    </a>
+                    <a href="http://m.500.com/datachart/plw/" class="chart-box-item">
+                        <div><img alt="排列五" src="http://www.500cache.com/mobile/touch/images/chart/hot-lottery/plw.jpg"></div>
+                        <div class="caiz-name">排列五</div>
+                    </a>
+                    <a href="http://m.500.com/datachart/klpk3/" class="chart-box-item">
+                        <div><img alt="快乐扑克3" src="http://www.500cache.com/mobile/touch/images/chart/hot-lottery/klpk.jpg"></div>
+                        <div class="caiz-name">快乐扑克3</div>
+                    </a>
+                    <a href="http://m.500.com/datachart/df6j1/" class="chart-box-item">
+                        <div><img alt="东方6+1" src="http://www.500cache.com/mobile/touch/images/chart/hot-lottery/ljy.jpg"></div>
+                        <div class="caiz-name">东方6+1</div>
+                    </a>
+                    <a href="http://m.500.com/datachart/xysc/" class="chart-box-item">
+                        <div><img alt="幸运赛车" src="http://www.500cache.com/mobile/touch/images/chart/hot-lottery/xysc.jpg"></div>
+                        <div class="caiz-name">幸运赛车</div>
+                    </a>
+
+                </div>
+            </div>
+            <!--热门彩种在这里结束-->
+            <!--地方彩种在这里开始-->
+            <div class="local-lottery">
+                <div class="chart-tit l-flex-row">
+                    <div class="l-flex-1 pl">地方彩种</div>
+                    <div class="l-flex-1 "><div class="city-select" id="selectBtn">广东<div class="up-icon"></div></div></div>
+                </div>
+                <div class="chart-box-list">
+                    <!--单独的小方格-->
+                    <!--广东  5个-->
+                    <a href="http://m.500.com/datachart/gdslxq/" class="gd chart-box-item" style="display: none">
+                        <div><img alt="广东福彩36选7" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/guangd/gdslxq.jpg"></div>
+                        <div class="caiz-name">广东福彩36选7</div>
+                    </a>
+                    <a href="http://m.500.com/datachart/gdelxw/" class="gd chart-box-item" style="display: none">
+                        <div><img alt="广东福彩26选5" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/guangd/gdelxw.jpg"></div>
+                        <div class="caiz-name">广东福彩26选5</div>
+                    </a>
+                    <a href="http://m.500.com/datachart/gdhc1/" class="gd chart-box-item" style="display: none">
+                        <div><img alt="广东福彩好彩1" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/guangd/gdhc1.jpg"></div>
+                        <div class="caiz-name">广东福彩好彩1</div>
+                    </a>
+                    <a href="http://m.500.com/datachart/gdsyxw/" class="gd chart-box-item" style="display: none">
+                        <div><img alt="广东11选5" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/guangd/gdsyxw.jpg"></div>
+                        <div class="caiz-name">广东11选5</div>
+                    </a>
+                    <a href="http://m.500.com/datachart/gdklsf/" class="gd chart-box-item" style="display: none">
+                        <div><img alt="广东快乐十分" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/guangd/gdklsf.jpg"></div>
+                        <div class="caiz-name">广东快乐十分</div>
+                    </a>
+                    <!--重庆 2个-->
+                    <a href="http://m.500.com/datachart/ssc/" class="cq chart-box-item" style="display: none">
+                        <div><img alt="重庆时时彩" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/chongq/ssc.jpg"></div>
+                        <div class="caiz-name">重庆时时彩</div>
+                    </a>
+                    <a href="http://m.500.com/datachart/chqklsf/" class="cq chart-box-item" style="display: none">
+                        <div><img alt="重庆快乐十分" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/chongq/chqklsf.jpg"></div>
+                        <div class="caiz-name">重庆快乐十分</div>
+                    </a>
+                    <!--天津 3个-->
+                    <a href="http://m.500.com/datachart/tjssc/" class="tj chart-box-item" style="display: none">
+                        <div><img alt="天津时时彩" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/tianj/tjssc.jpg"></div>
+                        <div class="caiz-name">天津时时彩</div>
+                    </a>
+                    <a href="http://m.500.com/datachart/tjsyxw/" class="tj chart-box-item" style="display: none">
+                        <div><img alt="天津11选5" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/tianj/tjsyxw.jpg"></div>
+                        <div class="caiz-name">天津11选5</div>
+                    </a>
+                    <a href="http://m.500.com/datachart/klsf/" class="tj chart-box-item" style="display: none">
+                        <div><img alt="天津快乐十分" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/tianj/klsf.jpg"></div>
+                        <div class="caiz-name">天津快乐十分</div>
+                    </a>
+                    <!--新疆 6个-->
+                    <a href="http://m.500.com/datachart/xjssc/" class="xj chart-box-item" style="display: none">
+                        <div><img alt="新疆时时彩" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/xinj/xjssc.jpg"></div>
+                        <div class="caiz-name">新疆时时彩</div>
+                    </a>
+                    <a href="http://m.500.com/datachart/xjsbxq/" class="xj chart-box-item" style="display: none">
+                        <div><img alt="新疆18选7" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/xinj/xjsbxq.jpg"></div>
+                        <div class="caiz-name">新疆18选7</div>
+                    </a>
+                    <a href="http://m.500.com/datachart/xjxlc/" class="xj chart-box-item" style="display: none">
+                        <div><img alt="新疆喜乐彩" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/xinj/xjxlc.jpg"></div>
+                        <div class="caiz-name">新疆喜乐彩</div>
+                    </a>
+                    <a href="http://m.500.com/datachart/xjewxq/" class="xj chart-box-item" style="display: none">
+                        <div><img alt="新疆25选7" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/xinj/xjewxq.jpg"></div>
+                        <div class="caiz-name">新疆25选7</div>
+                    </a>
+                    <a href="http://m.500.com/datachart/xjsyxw/" class="xj chart-box-item" style="display: none">
+                        <div><img alt="新疆11选5" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/xinj/xjsyxw.jpg"></div>
+                        <div class="caiz-name">新疆11选5</div>
+                    </a>
+                    <a href="http://m.500.com/datachart/xjswxq/" class="xj chart-box-item" style="display: none">
+                        <div><img alt="新疆35选7" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/xinj/xjswxq.jpg"></div>
+                        <div class="caiz-name">新疆35选7</div>
+                    </a>
+                    <!--云南 3个-->
+                    <a href="http://m.500.com/datachart/ynssc/" class="yn chart-box-item" style="display: none">
+                        <div><img alt="云南时时彩" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/yunn/ynssc.jpg"></div>
+                        <div class="caiz-name">云南时时彩</div>
+                    </a>
+                    <a href="http://m.500.com/datachart/ynsyxw/" class="yn chart-box-item" style="display: none">
+                        <div><img alt="云南11选5" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/yunn/ynsyxw.jpg"></div>
+                        <div class="caiz-name">云南11选5</div>
+                    </a>
+                    <a href="http://m.500.com/datachart/ynklsf/" class="yn chart-box-item" style="display: none">
+                        <div><img alt="云南快乐十分" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/yunn/ynklsf.jpg"></div>
+                        <div class="caiz-name">云南快乐十分</div>
+                    </a>
+                    <!--辽宁 3个-->
+                    <a href="http://m.500.com/datachart/lnswxq/" class="ll chart-box-item" style="display: none">
+                        <div><img alt="辽宁福彩35选7" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/liaon/lnswxq.jpg"></div>
+                        <div class="caiz-name">辽宁福彩35选7</div>
+                    </a>
+                    <a href="http://m.500.com/datachart/lnsyxw/" class="ll chart-box-item" style="display: none">
+                        <div><img alt="辽宁11选5" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/liaon/lnsyxw.jpg"></div>
+                        <div class="caiz-name">辽宁11选5</div>
+                    </a>
+                    <a href="http://m.500.com/datachart/lnkl12/" class="ll chart-box-item" style="display: none">
+                        <div><img alt="辽宁快乐12" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/liaon/lnkl12.jpg"></div>
+                        <div class="caiz-name">辽宁快乐12</div>
+                    </a>
+                    <!--北京 4个-->
+                    <a href="http://m.500.com/datachart/bjkzhc/" class="bj chart-box-item" style="display: none">
+                        <div><img alt="北京快中彩" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/beij/bjkzhc.jpg"></div>
+                        <div class="caiz-name">北京快中彩</div>
+                    </a>
+                    <a href="http://m.500.com/datachart/bjsyxw/" class="bj chart-box-item" style="display: none">
+                        <div><img alt="北京11选5" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/beij/bjsyxw.jpg"></div>
+                        <div class="caiz-name">北京11选5</div>
+                    </a>
+                    <a href="http://m.500.com/datachart/bjpkshi/" class="bj chart-box-item" style="display: none">
+                        <div><img alt="北京pk拾" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/beij/bjpkshi.jpg"></div>
+                        <div class="caiz-name">北京pk拾</div>
+                    </a>
+                    <!--todo add kl8-->
+                    <a href="http://m.500.com/datachart/kl8/" class="bj chart-box-item" style="display: none">
+                        <div><img alt="北京快乐8" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/beij/klb.jpg"></div>
+                        <div class="caiz-name">北京快乐8</div>
+                    </a>
+                    <!--河北 7个-->
+                    <a href="http://m.500.com/datachart/hebsyxw/" class="heb chart-box-item" style="display: none">
+                        <div><img alt="河北11选5" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/heb/hebsyxw.jpg"></div>
+                        <div class="caiz-name">河北11选5</div>
+                    </a>
+                    <a href="http://m.500.com/datachart/hbesxw/" class="heb chart-box-item" style="display: none">
+                        <div><img alt="河北福彩20选5" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/heb/hbesxw.jpg"></div>
+                        <div class="caiz-name">河北福彩20选5</div>
+                    </a>
+                    <a href="http://m.500.com/datachart/hbhy2/" class="heb chart-box-item" style="display: none">
+                        <div><img alt="河北福彩好运2" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/heb/hbhy2.jpg"></div>
+                        <div class="caiz-name">河北福彩好运2</div>
+                    </a>
+                    <a href="http://m.500.com/datachart/hbhy3/" class="heb chart-box-item" style="display: none">
+                        <div><img alt="河北好运3" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/heb/hbhy3.jpg"></div>
+                        <div class="caiz-name">河北好运3</div>
+                    </a>
+                    <a href="http://m.500.com/datachart/hebk3/" class="heb chart-box-item" style="display: none">
+                        <div><img alt="河北快3" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/heb/hebk3.jpg"></div>
+                        <div class="caiz-name">河北快3</div>
+                    </a>
+                    <a href="http://m.500.com/datachart/hbplw/" class="heb chart-box-item" style="display: none">
+                        <div><img alt="河北排列5" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/heb/hbplw.jpg"></div>
+                        <div class="caiz-name">河北排列5</div>
+                    </a>
+                    <a href="http://m.500.com/datachart/hbplq/" class="heb chart-box-item" style="display: none">
+                        <div><img alt="河北福彩排列七" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/heb/hbplq.jpg"></div>
+                        <div class="caiz-name">河北福彩排列七</div>
+                    </a>
+                    <!--内蒙古 2个-->
+                    <a href="http://m.500.com/datachart/nmgsyxw/" class="nmg chart-box-item" style="display: none">
+                        <div><img alt="内蒙古11选5" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/neimg/nmgsyxw.jpg"></div>
+                        <div class="caiz-name">内蒙古11选5</div>
+                    </a>
+                    <a href="http://m.500.com/datachart/nmgk3/" class="nmg chart-box-item" style="display: none">
+                        <div><img alt="内蒙古快3" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/neimg/nmgk3.jpg"></div>
+                        <div class="caiz-name">内蒙古快3</div>
+                    </a>
+                    <!--吉林 2个-->
+                    <a href="http://m.500.com/datachart/jlsyxw/" class="jl chart-box-item" style="display: none">
+                        <div><img alt="吉林11选5" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/jil/jlsyxw.jpg"></div>
+                        <div class="caiz-name">吉林11选5</div>
+                    </a>
+                    <a href="http://m.500.com/datachart/jlk3/" class="jl chart-box-item" style="display: none">
+                        <div><img alt="吉林快3" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/jil/jlk3.jpg"></div>
+                        <div class="caiz-name">吉林快3</div>
+                    </a>
+                    <!--黑龙江  5个-->
+                    <a href="http://m.500.com/datachart/hljsyxw/" class="hlj chart-box-item" style="display: none">
+                        <div><img alt="黑龙江11选5" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/heilj/hljsyxw.jpg"></div>
+                        <div class="caiz-name">黑龙江11选5</div>
+                    </a>
+                    <a href="http://m.500.com/datachart/hljslxq/" class="hlj chart-box-item" style="display: none">
+                        <div><img alt="黑龙江36选7" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/heilj/hljslxq.jpg"></div>
+                        <div class="caiz-name">黑龙江36选7</div>
+                    </a>
+                    <a href="http://m.500.com/datachart/hlj6j1/" class="hlj chart-box-item" style="display: none">
+                        <div><img alt="黑龙江体彩6+1" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/heilj/hlj6j1.jpg"></div>
+                        <div class="caiz-name">黑龙江体彩6+1</div>
+                    </a>
+                    <a href="http://m.500.com/datachart/hljp62/" class="hlj chart-box-item" style="display: none">
+                        <div><img alt="黑龙江福彩p62" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/heilj/hljp62.jpg"></div>
+                        <div class="caiz-name">黑龙江福彩p62</div>
+                    </a>
+                    <a href="http://m.500.com/datachart/hljeexw/" class="hlj chart-box-item" style="display: none">
+                        <div><img alt="黑龙江22选5" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/heilj/esexw.jpg"></div>
+                        <div class="caiz-name">黑龙江22选5</div>
+                    </a>
+                    <!--上海  4个-->
+                    <a href="http://m.500.com/datachart/shhsyxw/" class="sh chart-box-item" style="display: none">
+                        <div><img alt="上海11选5" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/shangh/shhsyxw.jpg"></div>
+                        <div class="caiz-name">上海11选5</div>
+                    </a>
+                    <a href="http://m.500.com/datachart/shswxw/" class="sh chart-box-item" style="display: none">
+                        <div><img alt="上海福彩15选5" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/shangh/shswxw.jpg"></div>
+                        <div class="caiz-name">上海福彩15选5</div>
+                    </a>
+                    <a href="http://m.500.com/datachart/shhk3/" class="sh chart-box-item" style="display: none">
+                        <div><img alt="上海快3" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/shangh/shhk3.jpg"></div>
+                        <div class="caiz-name">上海快3</div>
+                    </a>
+                    <a href="http://m.500.com/datachart/ssl/" class="sh chart-box-item" style="display: none">
+                        <div><img alt="上海时时乐" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/shangh/ssl.jpg"></div>
+                        <div class="caiz-name">上海时时乐</div>
+                    </a>
+                    <!--江苏  4个-->
+                    <a href="http://m.500.com/datachart/jssyxw/" class="js chart-box-item" style="display: none">
+                        <div><img alt="江苏11选5" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/jiangs/jssyxw.jpg"></div>
+                        <div class="caiz-name">江苏11选5</div>
+                    </a>
+                    <a href="http://m.500.com/datachart/jsswxw/" class="js chart-box-item" style="display: none">
+                        <div><img alt="江苏福彩15选5" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/jiangs/jsswxw.jpg"></div>
+                        <div class="caiz-name">江苏福彩15选5</div>
+                    </a>
+                    <a href="http://m.500.com/datachart/jsk3/" class="js chart-box-item" style="display: none">
+                        <div><img alt="江苏快3" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/jiangs/jsk3.jpg"></div>
+                        <div class="caiz-name">江苏快3</div>
+                    </a>
+                    <a href="http://m.500.com/datachart/js7ws/" class="js chart-box-item" style="display: none">
+                        <div><img alt="江苏体彩七位数" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/jiangs/js7ws.jpg"></div>
+                        <div class="caiz-name">江苏体彩七位数</div>
+                    </a>
+                    <!--浙江  5个-->
+                    <a href="http://m.500.com/datachart/zjsyxw/" class="zj chart-box-item" style="display: none">
+                        <div><img alt="浙江11选5" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/jiangs/jssyxw.jpg"></div>
+                        <div class="caiz-name">浙江11选5</div>
+                    </a>
+                    <a href="http://m.500.com/datachart/zjesxw/" class="zj chart-box-item" style="display: none">
+                        <div><img alt="浙江体彩20选5" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/zhej/zjesxw.jpg"></div>
+                        <div class="caiz-name">浙江体彩20选5</div>
+                    </a>
+                    <a href="http://m.500.com/datachart/zjkl12/" class="zj chart-box-item" style="display: none">
+                        <div><img alt="浙江快乐12" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/zhej/zjkl12.jpg"></div>
+                        <div class="caiz-name">浙江快乐12</div>
+                    </a>
+                    <a href="http://m.500.com/datachart/zjswxw/" class="zj chart-box-item" style="display: none">
+                        <div><img alt="浙江福彩15选5" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/zhej/zjswxw.jpg"></div>
+                        <div class="caiz-name">浙江福彩15选5</div>
+                    </a>
+                    <a href="http://m.500.com/datachart/zj6j1/" class="zj chart-box-item" style="display: none">
+                        <div><img alt="浙江体彩6+1" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/zhej/zj6j1.jpg"></div>
+                        <div class="caiz-name">浙江体彩6+1</div>
+                    </a>
+                    <!--安徽  4个-->
+                    <a href="http://m.500.com/datachart/ahsyxw/" class="ah chart-box-item" style="display: none">
+                        <div><img alt="安徽11选5" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/anh/ahsyxw.jpg"></div>
+                        <div class="caiz-name">安徽11选5</div>
+                    </a>
+                    <a href="http://m.500.com/datachart/ahswxw/" class="ah chart-box-item" style="display: none">
+                        <div><img alt="安徽福彩15选5" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/anh/ahswxw.jpg"></div>
+                        <div class="caiz-name">安徽福彩15选5</div>
+                    </a>
+                    <a href="http://m.500.com/datachart/ahk3/" class="ah chart-box-item" style="display: none">
+                        <div><img alt="安徽快3" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/anh/ahk3.jpg"></div>
+                        <div class="caiz-name">安徽快3</div>
+                    </a>
+                    <a href="http://m.500.com/datachart/ahewxw/" class="ah chart-box-item" style="display: none">
+                        <div><img alt="安徽福彩25选5" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/anh/ahewxw.jpg"></div>
+                        <div class="caiz-name">安徽福彩25选5</div>
+                    </a>
+                    <!--福建  5个-->
+                    <a href="http://m.500.com/datachart/fjsyxw/" class="fj chart-box-item" style="display: none">
+                        <div><img alt="福建11选5" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/fuj/fjsyxw.jpg"></div>
+                        <div class="caiz-name">福建11选5</div>
+                    </a>
+                    <a href="http://m.500.com/datachart/fjswxw/" class="fj chart-box-item" style="display: none">
+                        <div><img alt="福建福彩15选5" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/fuj/fjswxw.jpg"></div>
+                        <div class="caiz-name">福建福彩15选5</div>
+                    </a>
+                    <a href="http://m.500.com/datachart/fjk3/" class="fj chart-box-item" style="display: none">
+                        <div><img alt="福建快3" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/fuj/fjk3.jpg"></div>
+                        <div class="caiz-name">福建快3</div>
+                    </a>
+                    <a href="http://m.500.com/datachart/fjeexw/" class="fj chart-box-item" style="display: none">
+                        <div><img alt="福建体彩22选5" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/fuj/fjeexw.jpg"></div>
+                        <div class="caiz-name">福建体彩22选5</div>
+                    </a>
+                    <a href="http://m.500.com/datachart/fjslxq/" class="fj chart-box-item" style="display: none">
+                        <div><img alt="福建体彩36选7" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/fuj/fjslxq.jpg"></div>
+                        <div class="caiz-name">福建体彩36选7</div>
+                    </a>
+
+                    <!--江西  2个-->
+                    <a href="http://m.500.com/datachart/dlc/" class="jx chart-box-item" style="display: none">
+                        <div><img alt="江西11选5" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/jiangx/dlc.jpg"></div>
+                        <div class="caiz-name">江西11选5</div>
+                    </a>
+                    <a href="http://m.500.com/datachart/jxswxw/" class="jx chart-box-item" style="display: none">
+                        <div><img alt="江西福彩15选5" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/jiangx/jxswxw.jpg"></div>
+                        <div class="caiz-name">江西福彩15选5</div>
+                    </a>
+                    <!--湖北  2个-->
+                    <a href="http://m.500.com/datachart/hbsyxw/" class="hub chart-box-item" style="display: none">
+                        <div><img alt="湖北11选5" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/hub/hbsyxw.jpg"></div>
+                        <div class="caiz-name">湖北11选5</div>
+                    </a>
+                    <a href="http://m.500.com/datachart/hbk3/" class="hub chart-box-item" style="display: none">
+                        <div><img alt="湖北快3" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/hub/hbk3.jpg"></div>
+                        <div class="caiz-name">湖北快3</div>
+                    </a>
+                    <!--广西  4个-->
+                    <a href="http://m.500.com/datachart/gxsyxw/" class="gx chart-box-item" style="display: none">
+                        <div><img alt="广西11选5" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/guangx/gxsyxw.jpg"></div>
+                        <div class="caiz-name">广西11选5</div>
+                    </a>
+                    <a href="http://m.500.com/datachart/klsc/" class="gx chart-box-item" style="display: none">
+                        <div><img alt="广西福彩快乐双彩" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/guangx/klsc.jpg"></div>
+                        <div class="caiz-name">广西福彩快乐双彩</div>
+                    </a>
+                    <a href="http://m.500.com/datachart/gxklsf/" class="gx chart-box-item" style="display: none">
+                        <div><img alt="广西快乐十分" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/guangx/gxklsf.jpg"></div>
+                        <div class="caiz-name">广西快乐十分 </div>
+                    </a>
+                    <a href="http://m.500.com/datachart/gxk3/" class="gx chart-box-item" style="display: none">
+                        <div><img alt="广西快3" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/guangx/gxk3.jpg"></div>
+                        <div class="caiz-name">广西快3</div>
+                    </a>
+                    <!--四川  2个-->
+                    <a href="http://m.500.com/datachart/scsyxw/" class="sc chart-box-item" style="display: none">
+                        <div><img alt="四川11选5" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/sic/scsyxw.jpg"></div>
+                        <div class="caiz-name">四川11选5</div>
+                    </a>
+                    <a href="http://m.500.com/datachart/sckl12/" class="sc chart-box-item" style="display: none">
+                        <div><img alt="四川快乐12" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/sic/sckl12.jpg"></div>
+                        <div class="caiz-name">四川快乐12</div>
+                    </a>
+                    <!--贵州  2个-->
+                    <a href="http://m.500.com/datachart/gzsyxw/" class="gz chart-box-item" style="display: none">
+                        <div><img alt="贵州11选5" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/guiz/gzsyxw.jpg"></div>
+                        <div class="caiz-name">贵州11选5</div>
+                    </a>
+                    <a href="http://m.500.com/datachart/gzk3/" class="gz chart-box-item" style="display: none">
+                        <div><img alt="贵州快3" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/guiz/gzk3.jpg"></div>
+                        <div class="caiz-name">贵州快3</div>
+                    </a>
+                    <!--陕西  1个-->
+                    <a href="http://m.500.com/datachart/sxsyxw/" class="sx3 chart-box-item" style="display: none">
+                        <div><img alt="陕西11选5" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/shanx/sxsyxw.jpg"></div>
+                        <div class="caiz-name">陕西11选5</div>
+                    </a>
+
+                    <!--甘肃  2个-->
+                    <a href="http://m.500.com/datachart/gssyxw/" class="gs chart-box-item" style="display: none">
+                        <div><img alt="甘肃11选5" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/gans/gssyxw.jpg"></div>
+                        <div class="caiz-name">甘肃11选5</div>
+                    </a>
+                    <a href="http://m.500.com/datachart/gsk3/" class="gs chart-box-item" style="display: none">
+                        <div><img alt="甘肃快3" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/gans/gsk3.jpg"></div>
+                        <div class="caiz-name">甘肃快3</div>
+                    </a>
+                    <!--山西  2个-->
+                    <a href="http://m.500.com/datachart/shxsyxw/" class="sx1 chart-box-item" style="display: none">
+                        <div><img alt="山西11选5" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/shanxi/shxsyxw.jpg"></div>
+                        <div class="caiz-name">山西11选5</div>
+                    </a>
+                    <a href="http://m.500.com/datachart/ytdj/" class="sx1 chart-box-item" style="display: none">
+                        <div><img alt="山西泳坛夺金" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/shanxi/ytdj.jpg"></div>
+                        <div class="caiz-name">山西泳坛夺金</div>
+                    </a>
+                    <!--山东  3个-->
+                    <!--<a href="http://m.500.com/datachart/syydj/" class="sd chart-box-item" style="display: none">-->
+                    <a href="http://m.500.com/datachart/shdsyxw/" class="sd chart-box-item" style="display: none">
+                        <div><img alt="山东十一运夺金" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/shand/syydj.jpg"></div>
+                        <div class="caiz-name">山东十一运夺金</div>
+                    </a>
+                    <a href="http://m.500.com/datachart/qyh/" class="sd chart-box-item" style="display: none">
+                        <div><img alt="山东群英会" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/shand/qyh.jpg"></div>
+                        <div class="caiz-name">山东群英会</div>
+                    </a>
+                    <a href="http://m.500.com/datachart/klpk3/" class="sd chart-box-item" style="display: none">
+                        <div><img alt="山东快乐扑克3" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/shand/klpk3.jpg"></div>
+                        <div class="caiz-name">山东快乐扑克3 </div>
+                    </a>
+                    <!--湖南  2个-->
+                    <a href="http://m.500.com/datachart/hnklsf/" class="hunan chart-box-item" style="display: none">
+                        <div><img alt="湖南快乐十分" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/hun/hnklsf.jpg"></div>
+                        <div class="caiz-name">湖南快乐十分</div>
+                    </a>
+                    <a href="http://m.500.com/datachart/xysc/" class="hunan chart-box-item" style="display: none">
+                        <div><img alt="湖南幸运赛车" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/hun/xysc.jpg"></div>
+                        <div class="caiz-name">湖南幸运赛车</div>
+                    </a>
+                    <!--河南  3个-->
+                    <a href="http://m.500.com/datachart/zyeexw/" class="henan chart-box-item" style="display: none">
+                        <div><img alt="河南福彩22选5" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/hen/zyeexw.jpg"></div>
+                        <div class="caiz-name">河南福彩22选5</div>
+                    </a>
+                    <a href="http://m.500.com/datachart/henk3/" class="henan chart-box-item" style="display: none">
+                        <div><img alt="河南快3" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/hen/henk3.jpg"></div>
+                        <div class="caiz-name">河南快3</div>
+                    </a>
+                    <a href="http://m.500.com/datachart/henky481/" class="henan chart-box-item" style="display: none">
+                        <div><img alt="河南快赢481" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/hen/henky481.jpg"></div>
+                        <div class="caiz-name">河南快赢481</div>
+                    </a>
+                    <!--深圳  1个-->
+                    <a href="http://m.500.com/datachart/szfc/" class="sz chart-box-item" style="display: none">
+                        <div><img alt="深圳风采" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/shenz/szfc.jpg"></div>
+                        <div class="caiz-name">深圳风采</div>
+                    </a>
+                    <!--青海  1个-->
+                    <a href="http://m.500.com/datachart/qhk3/" class="qh chart-box-item" style="display: none">
+                        <div><img alt="青海快3" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/qingh/qhk3.jpg"></div>
+                        <div class="caiz-name">青海快3</div>
+                    </a>
+                    <!--海南  1个-->
+                    <a href="http://m.500.com/datachart/hnd4j1/" class="hnd chart-box-item" style="display: none">
+                        <div><img alt="海南4+1" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/hain/hnd4j1.jpg"></div>
+                        <div class="caiz-name">海南4+1</div>
+                    </a>
+                    <!--华东六省  1个-->
+                    <a href="http://m.500.com/datachart/hdswxw/" class="local chart-box-item" style="display: none">
+                        <div><img alt="华东六省福彩15选5" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/huadls/hdswxw.jpg"></div>
+                        <div class="caiz-name">华东六省福彩15选5</div>
+                    </a>
+                    <a href="http://m.500.com/datachart/df6j1/" class="local chart-box-item" style="display: none">
+                        <div><img alt="华东六省东方6+1" data-src="http://www.500cache.com/mobile/touch/images/chart/local-lottery/huadls/df6j1.jpg"></div>
+                        <div class="caiz-name">华东六省东方6+1 </div>
+                    </a>
+                </div>
+            </div>
+            <!--地方彩种在这里结束-->
+        </div>
+
+
+        <div class="l-full l-scroll-y" style="display:none" id="select">
+            <div class="city-look ">请选择您想查看的省份</div>
+            <!--单个省份-->
+            <div class="city-item " data-area="bj">北京</div>
+            <div class="city-item " data-area="tj">天津</div>
+            <div class="city-item " data-area="heb">河北</div>
+            <div class="city-item " data-area="nmg">内蒙古</div>
+            <div class="city-item " data-area="ll">辽宁</div>
+            <div class="city-item " data-area="jl">吉林</div>
+            <div class="city-item " data-area="hlj">黑龙江</div>
+            <div class="city-item " data-area="sh">上海</div>
+            <div class="city-item " data-area="js">江苏</div>
+            <div class="city-item " data-area="zj">浙江</div>
+            <div class="city-item " data-area="ah">安徽</div>
+            <div class="city-item " data-area="fj">福建</div>
+            <div class="city-item " data-area="jx">江西</div>
+            <div class="city-item " data-area="sd">山东</div>
+            <div class="city-item " data-area="henan">河南</div>
+            <div class="city-item " data-area="hub">湖北</div>
+            <div class="city-item " data-area="hunan">湖南</div>
+            <div class="city-item " data-area="gd">广东</div>
+            <div class="city-item " data-area="sz">深圳</div>
+            <div class="city-item " data-area="gx">广西</div>
+            <div class="city-item " data-area="cq">重庆</div>
+            <div class="city-item " data-area="sc">四川</div>
+            <div class="city-item " data-area="gz">贵州</div>
+            <div class="city-item " data-area="sx3">陕西</div>
+            <div class="city-item " data-area="gs">甘肃</div>
+            <div class="city-item " data-area="qh">青海</div>
+            <div class="city-item " data-area="xj">新疆</div>
+            <div class="city-item " data-area="sx1">山西</div>
+            <div class="city-item " data-area="yn">云南</div>
+            <div class="city-item " data-area="hnd">海南</div>
+            <div class="city-look text-m">下面真的没有了...</div>
+        </div>
+
+    </div>
+    <!--彩种走势图 end-->
+</div>
+
+<script>
+    (function ($) {
+        var datachart = {
+            bindEvent:function () {
+                $('#selectBtn').addEventListener('click', function (e) {
+                    $('#select').style.display = 'block'
+                });
+                $('#select').addEventListener('click', function (e) {
+                    $('#selectBtn').innerHTML = e.target.innerHTML+'<div class="up-icon"></div>';
+                    this.showArea(e.target.dataset.area);
+                    $('#select').style.display = 'none'
+                }.bind(this));
+            },
+            showArea:function (area) {
+                var btnEle = $('#selectBtn');
+                var current = btnEle.dataset.current;
+                if(current === area) return;
+
+                var disappearArea = document.querySelectorAll('.'+current);
+                for(var a=0,b=disappearArea.length;a<b;a++){
+                    disappearArea[a].style.display = 'none'
+                }
+
+                var showArea = document.querySelectorAll('.'+area);
+                var ele,img;
+                for(var i=0,j=showArea.length;i<j;i++){
+                    ele = showArea[i];
+                    img = ele.querySelector('img');
+                    if(!img.src){
+                        img.src = img.dataset.src
+                    }
+                    ele.style.display = 'block'
+                }
+
+                btnEle.dataset.current = area
+
+            },
+
+            init:function () {
+                this.bindEvent();
+                this.showArea('gd')
+            }
+        };
+        Object.keys(datachart).forEach(function (key) {
+            if(typeof key==='function'){
+                datachart[key] = datachart[key].bind(datachart)
+            }
+        });
+        datachart.init()
+    })(function (qs) {
+        return document.querySelector(qs)
+    })
+
+
+
+
+
+</script>
+
+</body>
+</html>

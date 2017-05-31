@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>走势图</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <link type="text/css" rel="stylesheet" href="http://www.500cache.com/mobile/??widget/head/head.css,widget/navbox/navbox.css,widget/layout/baselo.css,touch/css/zoushi.css,touch/css/zous.css" />
+    <!--<link href="http://cache.500boss.com/mobile/touch/css/zoushi.css" type="text/css" rel="stylesheet">-->
+
+    <!--todo delete-->
+    <!--<link href="http://cache.500boss.com/mobile/touch/css/zous.css" type="text/css" rel="stylesheet" />-->
+    <!--<link href="http://cache.500boss.com/mobile/touch/css/ssq_zous.css" type="text/css" rel="stylesheet" />-->
+
+  </head>
+  <body>
+
+<div id="app"></div>
+<div style="display: none">
+  <!--# include file="/ssi/log.html" -->
+</div>
+  </body>
+</html>

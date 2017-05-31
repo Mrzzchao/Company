@@ -1,0 +1,60 @@
+﻿大系统后台项目：
+1、项目地址：http://newsvn.boss.com/500wan/500wan/trunk/jsp/push_and_ctrl_dxt
+
+2、线上域名：http://manage.cm.500.com/
+
+3、功能点
+   3.1 第一期功能点：升级开关、比分包上传、皮肤包上传、版本号配置、白名单配置
+       (1)升级开关 
+          后台业务逻辑：api/ApiAppTcverUpgradeController
+          前端页面：views/app_tc/productConfig/versionUpgrade.jsp
+          前端js: resources/js/app_tc/versionUpgrade.js
+
+       (2)比分包上传 
+          后台业务逻辑：api/ApiAppTcscoreUpdateController
+          前端页面：views/app_tc/productConfig/scoreUpdate.jsp
+          前端js: resources/js/app_tc/scoreUpdate.js
+
+       (3)皮肤包上传 
+          后台业务逻辑：api/ApiAppTcskinUpdateController
+          前端页面：views/app_tc/productConfig/skinUpdate.jsp
+          前端js: resources/js/app_tc/skinUpdate.js
+
+       (4)版本号配置 
+          后台业务逻辑：api/ApiAppTcverConfigController
+          前端页面：views/app_tc/productConfig/versionConfig.jsp
+          前端js: resources/js/app_tc/versionConfig.js
+
+       (5)白名单配置 
+          后台业务逻辑：api/ApiAppTcwhiteConfigController
+          前端页面：views/app_tc/productConfig/whitelistConfig.jsp
+          前端js: resources/js/app_tc/whitelistConfig.js
+
+   3.2 第二期功能点：图片广告（首页悬浮窗、中部活动推广区、首页右上角福袋、头条顶部推广位）、文字广告（轮播公告、副标题、角标）
+       (1)首页运营位 （包括首页悬浮窗、中部活动推广区、首页右上角福袋）
+          后台业务逻辑：api/ApiAppTchomeOperationController
+          前端页面：views/app_tc/imageAd/homeOperation.jsp
+          前端js: resources/js/app_tc/homeOperation.js
+
+       (2)头条运营位 （包括头条顶部推广位）
+          后台业务逻辑：api/ApiAppTcheadlineOperationController
+          前端页面：views/app_tc/imageAd/headlineOperation.jsp
+          前端js: resources/js/app_tc/headlineOperation.js
+
+       (3)轮播公告
+          后台业务逻辑：api/ApiAppTcflashAdController
+          前端页面：views/app_tc/textAd/flashAd.jsp
+          前端js: resources/js/app_tc/headlflashAd.js
+
+       (4)角标
+          后台业务逻辑：api/AApiAppTccornerMarkController
+          前端页面：views/app_tc/textAd/cornerMark.jsp
+          前端js: resources/js/app_tc/cornerMark.js
+
+       (5)副标题
+          后台业务逻辑：api/AApiAppTccornerMarkController
+          前端页面：views/app_tc/textAd/subTitle.jsp
+          前端js: resources/js/app_tc/subTitle.js
+          
+
+

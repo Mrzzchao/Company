@@ -1,0 +1,283 @@
+走势图项目：
+1、项目地址：http://svn.500wan.com/wap/wapcode/trunk/php/html_ssr/server
+2、彩种位置：参考项目根目录下router/index.js文件
+
+   （1）所有11选5： '/datachart/:area(.*syxw|dlc|shdsyxw)', 
+                     公用component: SFContainer,
+                     基本页面：jb.html , 对应的component: FbzsView,
+                     前一页面：q1.html , 对应的component: SyxwQ1View，
+                     和值页面：hz.html , 对应的component: SFHzzsView,
+                     (注：dlc是江西11选5)
+   （2）所有时时彩：  '/datachart/:area(.*ssc)', 
+                     公用component: SSCContainer,
+                     基本页面：zx/jb.html , 对应的component: SSCZxView,
+                     万位页面：zx/ww.html , 对应的component: SSCZxView,
+                     千位页面：zx/qw.html , 对应的component: SSCZxView,
+                     百位页面：zx/bw.html , 对应的component: SSCZxView,
+                     十位页面：zx/sw.html , 对应的component: SSCZxView,
+                     个位页面：zx/gw.html , 对应的component: SSCZxView,
+                     和值页面: hz.html ,对应的component: SSCHzzsView,
+
+（3）所有快3：'/datachart/:area(ahk3|hebk3|gxk3|hbk3|jsk3|henk3|shhk3|qhk3|gsk3|nmgk3|jlk3|fjk3|gzk3)', 
+                     公用component: Container1,
+                     百位页面：zx/2.html , 对应的component: WzView,
+                     十位页面：zx/1.html , 对应的component: WzView,
+                     个位页面：zx/0.html , 对应的component: WzView,
+                     大小页面：dx.html , 对应的component: DxxtzsView,
+                     奇偶页面：jo.html , 对应的component: JoxtzsView,
+   （4）七乐彩：'/datachart/:area(qlc)', 
+                     公用component: Container,
+                     基本页面：jb.html , 对应的component: QlcJbzsView,
+                     大小页面：dx.html , 对应的component: DxzsView,
+                     奇偶页面：jo.html , 对应的component: JozsView,  
+   （5）双色球：'/datachart/:area(ssq)', 
+                     公用component: SsqContainer,
+                     基本页面：jb.html , 对应的component: SsqJbzsView,
+                     前区页面：qianqu.html , 对应的component: SsqQqzsView,
+                     前区大小页面：QqDx.html , 对应的component: DxzsView,
+                     前区奇偶页面：QqJo.html , 对应的component: JozsView,
+                     前区质合页面: QqZh.html , 对应的component: ZhiHezsView,
+                     后区页面：houqu.html , 对应的component: SsqHqzsView,
+                     后区常规振荡页面：HqCgzd.html , 对应的component: SsqHqzdView,
+                     后区常规振荡页面：HqLbzd.html , 对应的component: SsqHqlbzdView,
+   （6）大乐透：'/datachart/:area(dlt)', 
+                     公用component: DltContainer,
+                     基本页面：jb.html , 对应的component: DltJbzsView,
+                     前区页面：qianqu.html , 对应的component: DltQqzsView,
+                     前区大小页面：QqDx.html , 对应的component: DxzsView,
+                     前区奇偶页面：QqJo.html , 对应的component: JozsView,
+                     前区质合页面: QqZh.html , 对应的component: ZhiHezsView,
+                     后区页面：houqu.html , 对应的component: DltHqzsView,
+   （7）福彩3d：'/datachart/:area(sd)', 
+                     公用component: Fc3dContainer,
+                     基本页面：jb.html , 对应的component: Fc3dJbzsView,
+                     遗漏页面：yilou.html , component: SdYlzsView,
+                     冷热页面：lengre.html , component: SdLrzsView,
+                     大小页面：dx.html , 对应的component: DxxtzsView,
+                     奇偶页面：jo.html , 对应的component: JoxtzsView, 
+                     质合页面：zh.html , 对应的component: ZhiHextzsView,
+   （8）排列三：'/datachart/:area(pls)', 
+                     公用component: PlsContainer,
+                     基本页面：jb.html , 对应的component: PlsJbzsView,
+                     遗漏页面：yilou.html , component: SdYlzsView,
+                     冷热页面：lengre.html , component: SdLrzsView,
+   （9）广东好彩1：'/datachart/:area(gdhc1)', 
+                     公用component: Hc1Container,
+                     基本页面：jb.html , 对应的component: Hc1JbzsView,
+                     生肖页面：sx.html , component: Hc1SxzsView,
+                     方位页面：fw.html', component: Hc1fwzsView,
+   （10）幸运赛车：'/datachart/:area(xysc)', 
+                     公用component: XyscContainer,
+                     基本页面：jb.html , 对应的component: XyscJbView,
+                     前一页面：q1.html , 对应的component: XyscQ1View，
+                     前二页面：q2.html , 对应的component: XyscQ2View，
+                     前三页面：q3.html , 对应的component: XyscQ3View，
+   （11）北京pk十：'/datachart/:area(bjpkshi)', 
+                     公用component: Container1,
+                     冠军页面：zx/2.html , 对应的component: WzView,
+                     亚军页面：zx/1.html , 对应的component: WzView,
+                     季军页面：zx/0.html , 对应的component: WzView,
+   （12）河南快赢481和泳坛夺金：'/datachart/:area(henky481|ytdj)', 
+                     公用component: Container1,
+                     自由泳页面：zx/3.html , 对应的component: WzView,
+                     仰泳页面：zx/2.html , 对应的component: WzView,
+                     蛙泳页面：zx/1.html , 对应的component: WzView,
+                     蝶泳页面：zx/0.html , 对应的component: WzView,
+                     大小页面：dx.html , 对应的component: DxxtzsView,
+                     奇偶页面：jo.html , 对应的component: JoxtzsView, 
+   （13）所有时时乐：'/datachart/:area(ssl)', 
+                     公用component: Container1,
+                     百位页面：zx/2.html , 对应的component: WzView,
+                     十位页面：zx/1.html , 对应的component: WzView,
+                     个位页面：zx/0.html , 对应的component: WzView,
+                     大小页面：dx.html , 对应的component: DxxtzsView,
+                     奇偶页面：jo.html , 对应的component: JoxtzsView, 
+
+   （14）所有快乐十分(广西快乐十分除外)： '/datachart/:area(gxklsf)'，
+                     公用component: Container,
+                     基本页面：jb.html , 对应的component: JbzsView,
+                     大小页面：dx.html , 对应的component: DxzsView,
+                     奇偶页面：jo.html , 对应的component: JozsView, 
+                     
+   （15）广西快乐十分： '/datachart/:area(zjesxw|hbesxw|qyh)'，
+                     公用component: Container,
+                     基本页面：jb.html , 对应的component: JbzsView,
+                     大小页面：dx.html , 对应的component: DxzsView,
+                     奇偶页面：jo.html , 对应的component: JozsView,
+
+   （16）所有20选5： '/datachart/:area(zjesxw|hbesxw|qyh)'，
+                     公用component: Container,
+                     基本页面：jb.html , 对应的component: JbzsView,
+                     大小页面：dx.html , 对应的component: DxzsView,
+                     奇偶页面：jo.html , 对应的component: JozsView,
+
+   （17）所有22选5： '/datachart/:area(.+eexw)'，
+                     公用component: Container,
+                     基本页面：jb.html , 对应的component: JbzsView,
+                     大小页面：dx.html , 对应的component: DxzsView,
+                     奇偶页面：jo.html , 对应的component: JozsView,
+
+    (18)（辽宁|浙江|四川）快乐12：'/datachart/:area(lnkl12|zjkl12|sckl12)' ，
+                     公用component: SFContainer,
+                     基本页面：jb.html , 对应的component: FbzsView,
+                     和值页面：hz.html , 对应的component: SFHzzsView,
+                     前一页面：q1.html , 对应的component: SyxwQ1View,
+
+   （19）广西福彩快乐双彩： '/datachart/:area(klsc)'，
+                     公用component: Container,
+                     基本页面：jb.html , 对应的component: JbzsView,
+                     大小页面：dx.html , 对应的component: DxzsView,
+                     奇偶页面：jo.html , 对应的component: JozsView,
+
+   （20）新疆福彩18选7： '/datachart/:area(xjsbxq)'，
+                     公用component: Container,
+                     基本页面：jb.html , 对应的component: JbzsView,
+                     大小页面：dx.html , 对应的component: DxzsView,
+                     奇偶页面：jo.html , 对应的component: JozsView,
+
+   （21）所有15选5： '/datachart/:area(.+swxw)'，
+                     公用component: Container,
+                     基本页面：jb.html , 对应的component: JbzsView,
+                     大小页面：dx.html , 对应的component: DxzsView,
+                     奇偶页面：jo.html , 对应的component: JozsView,
+
+  （22）湖北好运2： '/datachart/:area(hbhy2)'，
+                     公用component: Container,
+                     基本页面：jb.html , 对应的component: JbzsView,
+                     大小页面：dx.html , 对应的component: DxzsView,
+                     奇偶页面：jo.html , 对应的component: JozsView,                 
+  （23）湖北好运3： '/datachart/:area(hbhy3)'，
+                     公用component: Container,
+                     基本页面：jb.html , 对应的component: JbzsView,
+                     大小页面：dx.html , 对应的component: DxzsView,
+                     奇偶页面：jo.html , 对应的component: JozsView,
+  （24）新疆喜乐彩：  '/datachart/:area(xjxlc)'，
+                     公用component: Container,
+                     基本页面：jb.html , 对应的component: JbzsView,
+                     大小页面：dx.html , 对应的component: DxzsView,
+                     奇偶页面：jo.html , 对应的component: JozsView,
+  （25）安徽福彩25选5：  '/datachart/:area(ahewxw)'，
+                     公用component: Container,
+                     基本页面：jb.html , 对应的component: JbzsView,
+                     大小页面：dx.html , 对应的component: DxzsView,
+                     奇偶页面：jo.html , 对应的component: JozsView,
+  （26）新疆福彩25选7:   '/datachart/:area(xjewxq)',
+                     公用component: Container,
+                     基本页面：jb.html , 对应的component: JbzsView,
+                     大小页面：dx.html , 对应的component: DxzsView,
+                     奇偶页面：jo.html , 对应的component: JozsView,
+   (27) 广东福彩26选5:  '/datachart/:area(gdelxw)',
+                     公用component: Container,
+                     基本页面：jb.html , 对应的component: JbzsView,
+                     大小页面：dx.html , 对应的component: DxzsView,
+                     奇偶页面：jo.html , 对应的component: JozsView,
+
+   (28) 深圳风采、(辽宁|新疆)35选7:  '/datachart/:area(szfc|lnswxq|xjswxq)', 
+                     公用component: Container,
+                     基本页面：jb.html , 对应的component: JbzsView,
+                     大小页面：dx.html , 对应的component: DxzsView,
+                     奇偶页面：jo.html , 对应的component: JozsView,
+   (29)(福建|广东|黑龙江)36选7: '/datachart/:area(fjslxq|gdslxq|hljslxq)', 
+                     公用component: Container,
+                     基本页面：jb.html , 对应的component: JbzsView,
+                     大小页面：dx.html , 对应的component: DxzsView,
+                     奇偶页面：jo.html , 对应的component: JozsView,
+
+   (30)快乐扑克3: '/datachart/:area(klpk3), 
+                     公用component: KlpkContainer,
+                     基本页面：jb.html , 对应的component: KlpkJbView，
+                     开奖号码分布页面：kjhm.html , 对应的component: KlpkKjhmView,
+                     号码形态页面： hmxt.html , 对应的component: KlpkhmxtView,
+
+   (31)河北排列五、海南4+1：'/datachart/:area(hbplw|hnd4j1)', 
+                     公用component: Container1,
+                     第一位页面：zx/4.html , 对应的component: WzView,
+                     第二位页面：zx/3.html , 对应的component: WzView,
+                     第三位页面：zx/2.html , 对应的component: WzView,
+                     第四位页面：zx/1.html , 对应的component: WzView,
+                     第五位页面：zx/0.html , 对应的component: WzView,
+                     大小页面：dx.html , 对应的component: DxzsView,
+                     奇偶页面：jo.html , 对应的component: JozsView,
+   (32)华东六省东方6+1：'/datachart/:area(df6j1)', 
+                     公用component: Container1,
+                     基本页面：zx/jb.html, 对应的component: Df6j1JbView,
+                     第一位页面：zx/6.html , 对应的component: WzView,
+                     第二位页面：zx/5.html , 对应的component: WzView,
+                     第三位页面：zx/4.html , 对应的component: WzView,
+                     第四位页面：zx/3.html , 对应的component: WzView,
+                     第五位页面：zx/2.html , 对应的component: WzView,
+                     第六位页面：zx/1.html , 对应的component: WzView,
+                     第七位页面：zx/0.html , 对应的component: WzView,
+                     大小页面：dx.html , 对应的component: DxzsView,
+                     奇偶页面：jo.html , 对应的component: JozsView, 
+
+   (33)排列五：'/datachart/:area(plw)', 
+                     公用component: QxPwContainer,
+                     基本页面： zx/0.html, 对应的component: QxPwWz,
+                     第一位页面：zx/1.html, 对应的component: QxPwWz,
+                     第二位页面：zx/2.html, 对应的component: QxPwWz,
+                     第三位页面：zx/3.html, 对应的component: QxPwWz，
+                     第四位页面：zx/4.html, 对应的component: QxPwWz，
+                     第五位页面：zx/5.html, 对应的component: QxPwWz，
+   (34)七星彩：'/datachart/:area(qxc)', 
+                     公用component: QxPwContainer,
+                     基本页面： zx/0.html, 对应的component: QxPwWz,
+                     第一位页面：zx/1.html, 对应的component: QxPwWz,
+                     第二位页面：zx/2.html, 对应的component: QxPwWz,
+                     第三位页面：zx/3.html, 对应的component: QxPwWz，
+                     第四位页面：zx/4.html, 对应的component: QxPwWz，
+                     第五位页面：zx/5.html, 对应的component: QxPwWz，
+                     第六位页面：zx/6.html, 对应的component: QxPwWz，
+                     第七位页面：zx/7.html, 对应的component: QxPwWz，
+
+   (35)河北福彩排列七、江苏体彩7位数： '/datachart/:area(hbplq|js7ws)', 
+                     公用component: Container1,
+                     第一位页面：zx/6.html , 对应的component: WzView,
+                     第二位页面：zx/5.html , 对应的component: WzView,
+                     第三位页面：zx/4.html , 对应的component: WzView,
+                     第四位页面：zx/3.html , 对应的component: WzView,
+                     第五位页面：zx/2.html , 对应的component: WzView,
+                     第六位页面：zx/1.html , 对应的component: WzView,
+                     第七位页面：zx/0.html , 对应的component: WzView,
+                     大小页面：dx.html , 对应的component: DxzsView,
+                     奇偶页面：jo.html , 对应的component: JozsView, 
+
+   (36)(浙江|黑龙江)6+1、黑龙江福彩p62：'/datachart/:area(zj6j1|hlj6j1|hljp62)',
+                     公用component: Container1,  
+                     第一位页面：zx/6.html , 对应的component: WzView,
+                     第二位页面：zx/5.html , 对应的component: WzView,
+                     第三位页面：zx/4.html , 对应的component: WzView,
+                     第四位页面：zx/3.html , 对应的component: WzView,
+                     第五位页面：zx/2.html , 对应的component: WzView,
+                     第六位页面：zx/1.html , 对应的component: WzView,
+                     第七位页面：zx/0.html , 对应的component: WzView,
+                     大小页面：dx.html , 对应的component: DxzsView,
+                     奇偶页面：jo.html , 对应的component: JozsView, 
+   (37)足彩胜负：'/datachart/:area(sfc)',
+                     公用component: Container1,  
+                     号码分布3页面：zfb/2.html , 对应的component: WzView,
+                     号码分布1页面：zfb/1.html , 对应的component: WzView,
+                     号码分布0页面：zfb/0.html , 对应的component: WzView,
+                     赛果统计平负场数页面：sgtj/2.html , 对应的component: WzView,
+                     赛果统计胜负场数页面：sgtj/1.html , 对应的component: WzView,
+                     赛果统计胜平场数页面：sgtj/0.html , 对应的component: WzView,
+   (38)北京快乐8：'/datachart/:area(kl8)',
+                     公用component: Container1,  
+                     一区页面：qj/8.html , 对应的component: WzView,
+                     二区页面：qj/7.html , 对应的component: WzView,
+                     三区页面：qj/6.html , 对应的component: WzView,
+                     四区页面：qj/5.html , 对应的component: WzView,
+                     五区页面：qj/4.html , 对应的component: WzView,
+                     六区页面：qj/3.html , 对应的component: WzView,
+                     七区页面：qj/2.html , 对应的component: WzView,
+                     八区页面：qj/1.html , 对应的component: WzView,
+                     飞盘页面：qj/1.html , 对应的component: WzView,
+
+                     
+
+                     
+                    
+
+
+                     
+                     

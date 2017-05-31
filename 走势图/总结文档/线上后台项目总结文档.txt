@@ -1,0 +1,49 @@
+线上后台项目：
+1、项目地址：http://newsvn.boss.com/500wan/500wan/trunk/jsp/push_cmd_ctrl
+2、线上域名：http://push.wap.500.com/
+3、功能点
+ 3.1 第一期功能点：举报白名单、先审后发帖、审核数量展示 (社区后台)
+
+     (1)举报白名单 
+
+          前端页面：views/bgaudit/reportWhiteConfig.jsp
+          前端js: resources/js/bgaudit/reportWhiteConfig.js
+
+     (2)先审后发帖 
+          后台业务逻辑：api/ApiCheckPostController
+          前端页面：views/bgaudit/checkPost.jsp
+          前端js: resources/js/bgaudit/checkPost.js
+
+     (3)审核数量展示 
+          前端页面：WEB-INF/views/incl/navbar.jspf
+
+ 3.2 第二期功能点：加精功能、圈子入口配置、新用户禁言设置
+
+     (1)加精功能 
+
+          前端页面：views/bbsoperation/compress.jsp
+          前端js: resources/js/bbsoperation/compress.js
+
+     (2)圈子入口配置 
+          
+          前端页面：views/bbsoperation/entry.jsp
+          前端js: resources/js/bbsoperation/entry.js
+
+     (3)新用户禁言设置
+
+          前端页面：views/bgaudit/forbidNewuser.jsp
+          前端js: resources/js/bgaudit/forbidNewuser.js
+
+ 3.3 添加比分包配置、白名单配置    
+
+     (1)比分包上传 
+          后台业务逻辑：api/ApiAppTcscoreUpdateController
+          前端页面：views/app_tc/productConfig/scoreUpdate.jsp
+          前端js: resources/js/app_tc/scoreUpdate.js
+       
+     (2)白名单配置 
+          后台业务逻辑：api/ApiAppTcwhiteListController
+          前端页面：views/app_tc/productConfig/whitelistConfig.jsp
+          前端js: resources/js/app_tc/whitelistConfig.js     
+     
+     注：功能已经开发完成，由于服务端没时间对接，所以后续开发终止。      
