@@ -1,4 +1,4 @@
-走势图项目：
+﻿走势图项目：
 1、项目地址：http://svn.500wan.com/wap/wapcode/trunk/php/html_ssr/server
 2、彩种位置：参考项目根目录下router/index.js文件
 
@@ -18,7 +18,7 @@
                      个位页面：zx/gw.html , 对应的component: SSCZxView,
                      和值页面: hz.html ,对应的component: SSCHzzsView,
 
-（3）所有快3：'/datachart/:area(ahk3|hebk3|gxk3|hbk3|jsk3|henk3|shhk3|qhk3|gsk3|nmgk3|jlk3|fjk3|gzk3)', 
+   （3）所有快3：'/datachart/:area(ahk3|hebk3|gxk3|hbk3|jsk3|henk3|shhk3|qhk3|gsk3|nmgk3|jlk3|fjk3|gzk3)', 
                      公用component: Container1,
                      百位页面：zx/2.html , 对应的component: WzView,
                      十位页面：zx/1.html , 对应的component: WzView,

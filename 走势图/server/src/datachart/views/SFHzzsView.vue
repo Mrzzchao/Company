@@ -6,7 +6,7 @@
 </template>
 
 <script type="text/ecmascript-6">
-
+    // 已阅
     import {mapActions} from 'vuex';
     import Loading from '../components/loading.vue';
     import Sfhzzs from '../components/SFHzzs.vue';

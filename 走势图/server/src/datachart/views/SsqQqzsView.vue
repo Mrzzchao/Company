@@ -80,7 +80,7 @@
                                     </tr>
                                     <tr class="summary line">
                                         <td v-for="idx in $route.meta.QianNum"><span>{{tj.maxlc.redfb[idx-1]}}</span></td>
-                                       
+
                                     </tr>
                                     </tbody>
                                 </table>
@@ -97,7 +97,7 @@
 
 
 <script type="text/ecmascript-6">
-
+    // 已阅
     import {mapActions} from 'vuex';
     import Loading from '../components/loading.vue';
     import scroll from '../common/scroll';

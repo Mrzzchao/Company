@@ -78,6 +78,7 @@
 
 
 <script type="text/ecmascript-6">
+    // 已阅
     import scroll from '../common/scroll';
     import zsline from '../common/zsline';
     import {raf} from '../common/util';

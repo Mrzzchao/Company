@@ -124,7 +124,7 @@ export default new VueRouter({
             },
             name: 'ssc',
             children: [
-
+                // 不同path，绑定到同一个组件，也会重新销毁和生成。
                 {
                     path: 'zx/jb.html',
                     component: SSCZxView,

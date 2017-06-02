@@ -185,7 +185,7 @@
 </template>
 
 <script type="text/ecmascript-6">
-
+    // 已阅
     import scroll from '../common/scroll';
     import {raf} from '../common/util';
     import {mapActions} from 'vuex';

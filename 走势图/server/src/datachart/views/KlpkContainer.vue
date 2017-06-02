@@ -33,7 +33,7 @@
             <keep-alive>
                 <router-view></router-view>
             </keep-alive>
-
+            <!--缓存组件，避免被销毁 -->
 
 
         </div>
@@ -43,6 +43,7 @@
 
 
 <script>
+    // 已阅
     import { nameMap } from '../common/constants';
     export default {
         data() {

@@ -53,6 +53,7 @@
 
 
 <script type="text/ecmascript-6">
+    // 已阅
     import { nameMap } from '../common/constants';
     import Qxpwwz from '../components/QxPwWz.vue';
     import Qxpwjbzs from '../components/QxPwJbzs.vue';

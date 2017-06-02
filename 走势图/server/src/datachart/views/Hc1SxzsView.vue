@@ -89,7 +89,7 @@
 </template>
 
 <script type="text/ecmascript-6">
-
+    // 已阅
    import scroll from '../common/scroll';
    import zsline from '../common/zsline';
    import {mapActions} from 'vuex';
@@ -97,65 +97,65 @@
    import {raf} from '../common/util';
 
    export default{
-       data() {
-           return {
-               sxmap: ['鼠', '牛', '虎', '兔', '龙', '蛇', '马', '羊', '猴', '鸡', '狗', '猪']
-           };
-       },
-       components: {
-           Loading
-       },
-       directives: {
-           scroll, zsline
-       },
-       watch: {
-           sxzs() {
-               this.config();
-           }
-       },
-       methods: {
-           ...mapActions([
-               'getHc1SxzsData'
-           ]),
-           config() {
-               raf(() => {
-                   this.$emit('initscroll');
-                   this.$emit('initzsline');
-               });
-           }
-       },
-       computed: {
-           sxzs () {
-               return this.$store.state.page.dxzs;
-           }
-       },
+           data() {
+               return {
+                   sxmap: ['鼠', '牛', '虎', '兔', '龙', '蛇', '马', '羊', '猴', '鸡', '狗', '猪']
+               };
+           },
+           components: {
+               Loading
+           },
+           directives: {
+               scroll, zsline
+           },
+           watch: {
+               sxzs() {
+                   this.config();
+               }
+           },
+           methods: {
+               ...mapActions([
+                   'getHc1SxzsData'
+               ]),
+               config() {
+                   raf(() => {
+                       this.$emit('initscroll');
+                       this.$emit('initzsline');
+                   });
+               }
+           },
+           computed: {
+               sxzs () {
+                   return this.$store.state.page.dxzs;
+               }
+           },
 
-       mounted() {
-           if (!this.sxzs) {
-               let area = this.$route.params.area;
-               this.getHc1SxzsData(area);
-           } else {
-               this.config();
-           }
-       },
-       filters: {
-           sxname(sxzs, sxmap) {
-               let sxname = '';
-               sxzs.some((e, i) => {
-                   if (e === '0') {
-                       sxname = sxmap[i];
-                       return true;
-                   }
-               });
-               return sxname;
-           }
-       },
+           mounted() {
+               if (!this.sxzs) {
+                   let area = this.$route.params.area;
+                   this.getHc1SxzsData(area);
+               } else {
+                   this.config();
+               }
+           },
+           filters: {
+               sxname(sxzs, sxmap) {
+                   let sxname = '';
+                   sxzs.some((e, i) => {
+                       if (e === '0') {
+                           sxname = sxmap[i];
+                           return true;
+                       }
+                   });
+                   return sxname;
+               }
+           },
 
-       preFetch (store) {
-           let area = store.state.route.params.area;
+           preFetch (store) {
+               let area = store.state.route.params.area;
 
-           return store.dispatch('getHc1SxzsData', area);
-       }
+               return store.dispatch('getHc1SxzsData', area);
+           }
    };
 
 </script>

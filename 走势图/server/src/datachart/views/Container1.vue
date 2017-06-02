@@ -16,7 +16,7 @@
         </header>
 
         <div v-if="showNav" @click="showNav=false" class="l-full"
-             style="z-index:2;background-color:rgba(0,0,0,.4)"></div>
+             style="z-index:2;background-color:rgba (0,0,0,.4)"></div>
 
         <div v-show="showNav" class="nav-weebox ">
 

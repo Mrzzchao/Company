@@ -76,8 +76,8 @@
                                     <td class="bdr2">{{item.opencode&&item.opencode.join(' ')||item.redcode&&item.redcode.split(',').join(' ')}}</td>
 
                                     <template v-if="dxtype&&dxtype==='dlt'" v-for="idx in num">
-                                    <td v-if="item['reddx'+idx]" :class="{'tdbg2':item['reddx'+idx][0]==='0','bdr2':idx===1}">{{item['reddx'+idx][0]==='0'?'小':item['reddx'+idx][0]}}</td>
-                                    <td v-if="item['reddx'+idx]" :class="{'tdbg1':item['reddx'+idx][1]==='0'}" class="bdr2">{{item['reddx'+idx][1]==='0'?'大':item['reddx'+idx][1]}}</td>
+                                        <td v-if="item['reddx'+idx]" :class="{'tdbg2':item['reddx'+idx][0]==='0','bdr2':idx===1}">{{item['reddx'+idx][0]==='0'?'小':item['reddx'+idx][0]}}</td>
+                                        <td v-if="item['reddx'+idx]" :class="{'tdbg1':item['reddx'+idx][1]==='0'}" class="bdr2">{{item['reddx'+idx][1]==='0'?'大':item['reddx'+idx][1]}}</td>
                                    </template>
                                     <template v-else v-for="idx in num">
                                         <td v-if="item['reddx'+idx]" :class="{'tdbg2':item['reddx'+idx][0]==='0','bdr2':idx===1}">{{item['reddx'+idx][0]==='0'?'大':item['reddx'+idx][0]}}</td>

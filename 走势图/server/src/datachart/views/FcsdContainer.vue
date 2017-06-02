@@ -100,6 +100,7 @@
 </template>
 
 <script>
+    // 已阅
     import { nameMap } from '../common/constants';
     export default {
         data() {

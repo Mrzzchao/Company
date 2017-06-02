@@ -105,68 +105,68 @@
 </template>
 
 <script type="text/ecmascript-6">
-
+    // 已阅
    import scroll from '../common/scroll';
    import {mapActions} from 'vuex';
    import Loading from '../components/loading.vue';
    import {raf} from '../common/util';
 
    export default{
-       data() {
-           return {
-               codeMap: ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'],
-               nameMap: ['对子', '三条', '同花', '顺子', '同花顺', '三不同']
-           };
-       },
-       components: {
-           Loading
-       },
-       directives: {
-           scroll
-       },
-       watch: {
-           klpk() {
-               this.config();
-           }
-       },
-       methods: {
-           ...mapActions([
-               'getKlpkData'
-           ]),
-           config() {
-               raf(() => {
-                   this.$emit('initscroll');
-               });
-           }
-       },
-       computed: {
-           klpk () {
-               return this.$store.state.page.jbzs;
-           }
-       },
-
-       mounted() {
-           if (!this.klpk) {
-               let area = this.$route.params.area;
-               this.getKlpkData(area);
-           } else {
-               this.config();
-           }
-       },
-       filters: {
-           pai(code, codeMap) {
-               return codeMap[parseInt(code.substr(1)) - 1];
+           data() {
+               return {
+                   codeMap: ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'],
+                   nameMap: ['对子', '三条', '同花', '顺子', '同花顺', '三不同']
+               };
            },
-           numclzz(result) {
-               return 'k3_bg1';
+           components: {
+               Loading
+           },
+           directives: {
+               scroll
+           },
+           watch: {
+               klpk() {
+                   this.config();
+               }
+           },
+           methods: {
+               ...mapActions([
+                   'getKlpkData'
+               ]),
+               config() {
+                   raf(() => {
+                       this.$emit('initscroll');
+                   });
+               }
+           },
+           computed: {
+               klpk () {
+                   return this.$store.state.page.jbzs;
+               }
+           },
+
+           mounted() {
+               if (!this.klpk) {
+                   let area = this.$route.params.area;
+                   this.getKlpkData(area);
+               } else {
+                   this.config();
+               }
+           },
+           filters: {
+               pai(code, codeMap) {
+                   return codeMap[parseInt(code.substr(1)) - 1];
+               },
+               numclzz(result) {
+                   return 'k3_bg1';
+               }
+           },
+
+           preFetch (store) {
+               let area = store.state.route.params.area;
+
+               return store.dispatch('getKlpkData', area);
            }
-       },
-
-       preFetch (store) {
-           let area = store.state.route.params.area;
-
-           return store.dispatch('getKlpkData', area);
-       }
    };
 
 </script>
