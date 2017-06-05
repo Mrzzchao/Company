@@ -17,8 +17,8 @@
         data () {
             return {
                 container: null,
-                content: null,
-                navigator: null,
+                content: null,                // 滚动框
+                navigator: null,              // 赛况、分析、预测等导航栏
                 headPartHeight: 0,
                 width: 0,
                 containerHeight: 0,
