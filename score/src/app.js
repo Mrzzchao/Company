@@ -19,7 +19,7 @@ export function createApp () {
     const app = new Vue({
         router,
         store,
-        render: h => h(App)
+        render: h => h(App)  // h是createElement的习惯简写。渲染app组件
     })
 
     // expose the app, the router and the store.

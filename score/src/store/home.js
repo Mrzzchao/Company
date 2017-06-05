@@ -7,7 +7,7 @@ import {pushEvents} from '~common/constants'
 const ns = 'home'
 const state = {
     filter: {
-        begin: false,
+        begin: false,            // 作为点击的一个变化标志
         show: false,
         matches: null,
         init: null,
@@ -16,7 +16,7 @@ const state = {
         onCancel: () => {
         }
     },
-    zq: {
+    zq: {                // 足球
         tab: 'jczq',
         matches: null,
         expectList: null,
@@ -27,7 +27,7 @@ const state = {
             jczq: null
         }
     },
-    lq: {
+    lq: {                // 篮球
         jclq: {
             expectList: null,
             cExpect: null,

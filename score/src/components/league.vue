@@ -34,9 +34,9 @@
         data () {
             return {
                 fiveLeagues: { '西甲': 1, '意甲': 2, '英超': 3, '德甲': 4, '法甲': 5 },
-                selectOptions: {},
-                leagueNameList: [],
-                filteredMatches: []
+                selectOptions: {},             // 联赛是否被选中标志
+                leagueNameList: [],            // 联赛名字集合
+                filteredMatches: []            // 筛选出的比赛
             }
         },
         mounted () {

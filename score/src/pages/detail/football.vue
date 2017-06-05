@@ -143,7 +143,7 @@
         },
         computed: {
             baseInfo () {
-                return this.$store.state.zqdetail.baseInfo
+                return this.$store.state.zqdetail.baseInfo             // 足球基本信息
             }
         },
         mounted () {

@@ -16,7 +16,7 @@
         <!--顶部的tab-->
         <div class="l-flex-1 l-relative">
 
-            <nuxt-child/>
+        <router-view></router-view>
 
         </div>
 

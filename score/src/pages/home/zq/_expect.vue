@@ -159,7 +159,7 @@
         },
         data () {
             return {
-                feature: {
+                feature: {                                // 比赛状态标志
                     a: {
                         [StatusCode.NOT_STARTED]: true,
                         [StatusCode.CANCELED]: true,
@@ -175,14 +175,14 @@
                         [StatusCode.ENDED]: true
                     }
                 },
-                StatusCode,
-                showExpectList: false,
-                selectOptions: null,
-                filteredMatches: null
+                StatusCode,                                // 比赛状态码
+                showExpectList: false,                     // 日期选择显示标志
+                selectOptions: null,                       // 联赛选择标志
+                filteredMatches: null                      // 筛选比赛集合
             }
         },
         watch: {
-            beginFilter (begin) {
+            beginFilter (begin) {                          // 初始化筛选store
                 if (begin) {
                     this.$store.dispatch(aTypes.startFilter, {
                         matches: this.matches,
