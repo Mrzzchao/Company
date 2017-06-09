@@ -1,0 +1,9 @@
+node_modules
+npm-debug.log
+.idea
+#/.gitignore
+dist/
+/config
+#/server.js
+test.js
+
